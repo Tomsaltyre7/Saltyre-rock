@@ -44,15 +44,10 @@ h2 {
 }
 
 .castle-image {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-}
-
-.castle-image img {
   display: block;
   max-width: 100%;
   height: auto;
+  margin: 1rem 0;
 }
 
 .beach-photos {
