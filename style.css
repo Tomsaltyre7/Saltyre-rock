@@ -43,6 +43,14 @@ h2 {
   font-size: clamp(1.25rem, 4vw, 1.875rem);
 }
 
+.island-description {
+  max-width: 70rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
 .castle-image {
   display: block;
   max-width: 100%;
