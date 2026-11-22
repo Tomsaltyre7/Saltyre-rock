@@ -43,6 +43,18 @@ h2 {
   font-size: clamp(1.25rem, 4vw, 1.875rem);
 }
 
+.castle-image {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.castle-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .beach-photos {
   display: flex;
   flex-wrap: wrap;
