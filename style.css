@@ -45,13 +45,13 @@ h2 {
 }
 
 .island-description {
-  width: 100%;
-  max-width: 70rem;
-  margin: 1rem auto;
-  padding: clamp(0.75rem, 4vw, 1.5rem);
-  background-color: #fff;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  line-height: 1.6;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.75rem auto;
+  padding: 0.5rem 1rem;
+  background-color: antiquewhite;
+  font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+  line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
