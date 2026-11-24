@@ -85,7 +85,6 @@ h2 {
   .map-dialog img {
     animation: none;
     border-color: #7654d6;
-    box-shadow: 0 0 12px #7654d6;
   }
 }
 
@@ -158,6 +157,23 @@ a.email {
   background: rgb(0 0 0 / 75%);
 }
 
+.map-dialog-content {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.map-address {
+  color: #000;
+  background: antiquewhite;
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0.5rem;
+}
+
 .map-dialog img {
   display: block;
   max-width: 100%;
@@ -209,5 +225,14 @@ a.email {
   .castle-image {
     border-width: 6px;
     padding: 0.25rem;
+  }
+
+  .map-dialog-content {
+    grid-template-columns: 1fr;
+  }
+
+  .map-address {
+    max-width: 18rem;
+    margin: 0 auto;
   }
 }
