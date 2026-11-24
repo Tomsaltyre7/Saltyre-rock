@@ -81,7 +81,8 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .castle-image {
+  .castle-image,
+  .map-dialog img {
     animation: none;
     border-color: #7654d6;
     box-shadow: 0 0 12px #7654d6;
@@ -149,7 +150,7 @@ a.email {
   padding: 2.75rem 1rem 1rem;
   border: 2px solid #7654d6;
   border-radius: 0.5rem;
-  background: antiquewhite;
+  background: lightblue;
   box-shadow: 0 0 20px #7654d6;
 }
 
@@ -163,6 +164,9 @@ a.email {
   max-height: 75vh;
   height: auto;
   margin: 0 auto;
+  padding: 0.4rem;
+  border: 8px solid #4986e7;
+  animation: castle-frame-colors 8s ease-in-out infinite alternate;
 }
 
 .map-dialog-close {
