@@ -139,7 +139,10 @@ a.email {
 }
 
 .map-address {
-  margin: 0;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.75rem auto 0;
   padding: 0.6rem;
   color: #000;
   background: transparent;
@@ -151,11 +154,14 @@ a.email {
 }
 
 .address-map-layout {
-  display: grid;
-  grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr);
-  align-items: center;
-  gap: 1rem;
-  max-width: 75rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.map-page-image-area {
+  width: min(100%, 55rem);
   margin: 0 auto;
 }
 
@@ -205,20 +211,6 @@ a.email {
   .castle-image {
     border-width: 6px;
     padding: 0.25rem;
-  }
-
-  .address-map-layout {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .map-address {
-    justify-self: center;
-  }
-
-  .map-page-image-area {
-    width: min(100%, 55rem);
-    margin: 0 auto;
   }
 
   .map-page-image {
