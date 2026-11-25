@@ -55,6 +55,15 @@ h2 {
   line-height: 1.5;
 }
 
+.operation-label {
+  display: inline-block;
+  margin-right: 0.15em;
+  color: #c62828;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 0 rgb(255 255 255 / 80%), 0 2px 4px rgb(198 40 40 / 20%);
+}
+
 .operation-title {
   display: inline-block;
   margin: 0.2em 0;
