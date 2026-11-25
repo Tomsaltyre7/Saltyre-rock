@@ -44,6 +44,31 @@ h2 {
   font-size: clamp(1.125rem, 4vw, 1.875rem);
 }
 
+.operation-subtitle {
+  max-width: 52rem;
+  margin: 1rem auto 1.5rem;
+  padding: 1rem;
+  border: 3px solid #3157a4;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f8f2e7, #dceeff);
+  box-shadow: 0 5px 16px rgb(49 87 164 / 25%);
+  line-height: 1.5;
+}
+
+.operation-title {
+  display: inline-block;
+  margin: 0.2em 0;
+  padding: 0.12em 0.45em;
+  border-radius: 0.35em;
+  background: linear-gradient(110deg, #244caa, #7654d6);
+  box-shadow: 0 3px 10px rgb(70 55 150 / 35%);
+  color: #fff;
+  font-size: 1.12em;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
+}
+
 .island-description {
   width: fit-content;
   max-width: 100%;
