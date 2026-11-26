@@ -118,6 +118,14 @@ h2 {
   animation: castle-frame-colors 8s ease-in-out infinite alternate;
 }
 
+.flandoosh-image {
+  display: block;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+
 .kraizen-promo {
   width: 100%;
   margin: 1rem auto;
