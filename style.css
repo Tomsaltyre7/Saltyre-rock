@@ -99,6 +99,44 @@ h2 {
   animation: castle-frame-colors 8s ease-in-out infinite alternate;
 }
 
+.kraizen-promo {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.kraizen-promo-title {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.25rem auto 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #c2185b;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #fff0f6, #ffd6e7);
+  box-shadow: 0 4px 14px rgb(194 24 91 / 22%);
+  color: #ad1457;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 0 #fff, 0 3px 8px rgb(173 20 87 / 25%);
+}
+
+.kraizen-promo-image {
+  width: fit-content;
+}
+
+.kraizen-promo-caption {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.75rem auto 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  background: #fff0f6;
+  color: #880e4f;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-weight: 700;
+}
+
 .church-bell {
   width: 100%;
   margin: 1rem auto;
