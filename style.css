@@ -119,7 +119,7 @@ h2 {
 }
 
 .places-carousel {
-  width: min(100%, 38rem);
+  width: min(100%, 28rem);
   margin: 1rem auto 1.5rem;
 }
 
@@ -136,27 +136,32 @@ h2 {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0.4rem;
+  padding: 0;
   overflow: hidden;
-  border: 1px solid #4986e7;
-  background: antiquewhite;
-  box-shadow: 0 5px 14px rgb(0 0 0 / 25%);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
   transition: transform 450ms ease;
 }
 
 .places-slide.is-active {
   z-index: 3;
-  transform: translate(0, 0) rotate(0);
+  transform: translate(0, 0);
 }
 
 .places-slide.is-next {
   z-index: 2;
-  transform: translate(0.65rem, 0.5rem) rotate(3deg);
+  transform: translate(0, 0);
 }
 
 .places-slide.is-back {
   z-index: 1;
-  transform: translate(-0.65rem, 0.5rem) rotate(-3deg);
+  transform: translate(0, 0);
+}
+
+.places-slide[aria-hidden="true"] {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .places-slide .castle-image {
