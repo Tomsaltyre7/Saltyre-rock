@@ -118,6 +118,92 @@ h2 {
   animation: castle-frame-colors 8s ease-in-out infinite alternate;
 }
 
+.places-carousel {
+  width: min(100%, 38rem);
+  margin: 1rem auto 1.5rem;
+}
+
+.places-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  isolation: isolate;
+}
+
+.places-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0.4rem;
+  overflow: hidden;
+  border: 1px solid #4986e7;
+  background: antiquewhite;
+  box-shadow: 0 5px 14px rgb(0 0 0 / 25%);
+  transition: transform 450ms ease;
+}
+
+.places-slide.is-active {
+  z-index: 3;
+  transform: translate(0, 0) rotate(0);
+}
+
+.places-slide.is-next {
+  z-index: 2;
+  transform: translate(0.65rem, 0.5rem) rotate(3deg);
+}
+
+.places-slide.is-back {
+  z-index: 1;
+  transform: translate(-0.65rem, 0.5rem) rotate(-3deg);
+}
+
+.places-slide .castle-image {
+  width: 100%;
+  height: calc(100% - 3.4rem);
+  max-width: none;
+  margin: 0;
+  object-fit: contain;
+}
+
+.places-caption {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.4rem;
+  margin: 0;
+  padding: 0.35rem;
+  background: transparent;
+  text-align: center;
+}
+
+.places-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.places-control {
+  padding: 0.55rem 0.8rem;
+  border: 2px solid #3157a4;
+  border-radius: 0.4rem;
+  background: antiquewhite;
+  color: #000;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.places-control:hover,
+.places-control:focus-visible {
+  background: #fff;
+  text-decoration: underline;
+}
+
 .flandoosh-title {
   width: fit-content;
   margin: 1rem auto 0.5rem;
@@ -251,6 +337,10 @@ h2 {
     animation: none;
     border-color: #7654d6;
     box-shadow: 0 0 12px #7654d6;
+  }
+
+  .places-slide {
+    transition: none;
   }
 }
 

@@ -1,6 +1,66 @@
-// Run this code after the HTML page has loaded.
+// Run this code after the page has loaded.
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Welcome to Saltyre Rock!");
+
+  const placesCarousel = document.querySelector(".places-carousel");
+
+  if (placesCarousel) {
+    const slides = Array.from(placesCarousel.querySelectorAll(".places-slide"));
+    const previousButton = placesCarousel.querySelector("[data-slide-previous]");
+    const nextButton = placesCarousel.querySelector("[data-slide-next]");
+    const toggleButton = placesCarousel.querySelector("[data-slide-toggle]");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let currentSlide = 0;
+    let isPaused = prefersReducedMotion;
+    let autoplayTimer;
+
+    function updateSlide() {
+      slides.forEach((slide, index) => {
+        const position = (index - currentSlide + slides.length) % slides.length;
+        slide.classList.toggle("is-active", position === 0);
+        slide.classList.toggle("is-next", position === 1);
+        slide.classList.toggle("is-back", position > 1);
+        slide.setAttribute("aria-hidden", String(position !== 0));
+      });
+    }
+
+    function startAutoplay() {
+      window.clearInterval(autoplayTimer);
+      if (isPaused || document.hidden) return;
+      autoplayTimer = window.setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+      }, 4000);
+    }
+
+    function updateToggleButton() {
+      toggleButton.textContent = isPaused ? "Play slideshow" : "Pause slideshow";
+      toggleButton.setAttribute("aria-pressed", String(isPaused));
+    }
+
+    previousButton.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide();
+      startAutoplay();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide();
+      startAutoplay();
+    });
+
+    toggleButton.addEventListener("click", () => {
+      isPaused = !isPaused;
+      updateToggleButton();
+      startAutoplay();
+    });
+
+    document.addEventListener("visibilitychange", startAutoplay);
+    updateSlide();
+    updateToggleButton();
+    startAutoplay();
+  }
 
   const mapOpenButton = document.querySelector("#map-open");
   const mapDialog = document.querySelector("#map-dialog");

@@ -13,18 +13,27 @@
         <img class="site-banner" src="assets/images/saltyrerockbanner.png" alt="Saltyre Rock">
       </h1>
       <h2>Some of the places to visit on Saltyre Island</h2>
-      <p class="island-description">
-        les chalets de mes grands-mères
-      </p>
-      <img class="castle-image" src="assets/images/saltyrechalets1.jpg" alt="Chalets at Saltyre">
-      <p class="island-description">
-        Times to come
-      </p>
-      <img class="castle-image" src="assets/images/saltyresea1.jpg" alt="Sea around Saltyre">
-      <p class="island-description">
-        Calm flowing streams
-      </p>
-      <img class="castle-image" src="assets/images/Saltyrestream1.jpg" alt="Calm stream at Saltyre">
+      <section class="places-carousel" aria-label="Places to visit on Saltyre Island" aria-roledescription="carousel">
+        <div class="places-stack" aria-live="off">
+          <figure class="places-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+            <img class="castle-image" src="assets/images/saltyrechalets1.jpg" alt="Chalets at Saltyre">
+            <figcaption class="places-caption">les chalets de mes grands-mères</figcaption>
+          </figure>
+          <figure class="places-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
+            <img class="castle-image" src="assets/images/saltyresea1.jpg" alt="Sea around Saltyre">
+            <figcaption class="places-caption">Times to come</figcaption>
+          </figure>
+          <figure class="places-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
+            <img class="castle-image" src="assets/images/Saltyrestream1.jpg" alt="Calm stream at Saltyre">
+            <figcaption class="places-caption">Calm flowing streams</figcaption>
+          </figure>
+        </div>
+        <div class="places-controls" aria-label="Slideshow controls">
+          <button class="places-control" type="button" data-slide-previous>Previous</button>
+          <button class="places-control" type="button" data-slide-toggle aria-pressed="false">Pause slideshow</button>
+          <button class="places-control" type="button" data-slide-next>Next</button>
+        </div>
+      </section>
       <h3 class="flandoosh-title">Advertisement</h3>
       <img class="flandoosh-image" src="assets/images/flandoosh1.jpg" alt="Flandoosh at Saltyre">
       <p class="flandoosh-caption">Bank with us at Flandoosh bank</p>
